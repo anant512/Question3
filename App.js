@@ -12,12 +12,10 @@ function App(event) {
     setResult([...result, list]);
     setList("");
   };
-  const DeleteElement = (idx) => {
-    // setResult(result.slice(result.indexOf(event.target.value,0)));
-    // setResult([...result.slice(0,index,...result.slice(index,result.length))])
-     // assigning the list to temp variable
+  const DeleteElement = (event) => {
+    
      const temp = [...result];
-     temp.splice(result.slice(result.indexOf(idx.target.value)));
+     temp.splice(event,result.indexOf(event.target.value));
      setResult(temp);
   };
 
